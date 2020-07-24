@@ -1,0 +1,162 @@
+.morning {
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(23,23,23,0) 80%, rgba(23,23,23,0.5) 100%),
+    url(../images/bg4.jpg) no-repeat top #171717;
+  background-size: cover;
+}
+
+.noon{
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(23,23,23,0.5) 0%, rgba(23,23,23,0) 15%,
+    rgba(23,23,23,0) 85%, rgba(23,23,23,0.5) 100%),
+    url(../images/bg2.jpg) no-repeat top #171717;
+  background-size: cover;
+}
+
+.night{
+  height: 100vh;
+  background: url(../images/bg3.jpg) no-repeat top #171717;
+  background-size: cover;
+}
+
+#wallpaper{
+  width: 100vw;
+  height: 100vh;
+}
+
+p.menu {
+  font-family: Montserrat Light;
+  font-size: clamp(0px, 5vw, 65px);
+  display: inline-block;
+  text-align: left;
+  color: white;
+  margin: 0;
+}
+
+p.index {
+  font-family: Montserrat Light;
+  font-size: 1.2vw;
+  display: block;
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: 1vh;
+  left: 48%;
+  transform: translate(-50%, -50%);
+}
+
+.center{
+  text-align: center;
+  width: 100vw;
+  margin: 0;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center a{
+  font-family: Montserrat ExtraBold;
+  transition: text-shadow .3s, font-size .3s;
+  color:inherit;
+  text-decoration: inherit;
+}
+
+.center a:hover{
+  text-shadow: 0px 0px 1vw rgba(255, 255, 255, 0.28);
+}
+
+#slogan{
+  width: clamp(210px,15vw,350px);
+}
+
+img{
+  transition: -webkit-filter .2s, filter .2s;
+}
+
+img:hover{
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.4));
+  filter:         drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.4));
+}
+
+.index_footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70vw;
+  height: 10vh;
+  margin: 0;
+  position: absolute;
+  left: 15vw;
+  bottom: 3vh;
+}
+
+#blink{
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+#txt-cursor{
+  height: 100%;
+  position: absolute;
+  right: -.5vw;
+  border-right: solid #ffffff 3px;
+  -webkit-animation: fadeLoop 1s infinite; /* Safari 4+ */
+  -moz-animation:    fadeLoop 1s infinite; /* Fx 5+ */
+  -o-animation:      fadeLoop 1s infinite; /* Opera 12+ */
+  animation:         fadeLoop 1s infinite; /* IE 10+, Fx 29+ */
+}
+
+@keyframes fadeLoop {
+  0%    {opacity: 0;}
+  50%    {opacity: 1;}
+  60%      {opacity: 1;}
+  100%      {opacity: 0;}
+}
+
+
+@media screen and (min-width: 2000px) {
+  p.menu {
+    font-size: 4.5vw;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  p.menu {
+    font-size: clamp(0px, 7vw, 70px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  p.menu {
+    font-size: clamp(45px, 8vw, 75px);
+  }
+
+  .index_footer{
+    width: 80vw;
+    margin: 0;
+    left: 10vw;
+    bottom: 3vh;
+  }
+
+  #slogan{
+    width: clamp(210px,25vw,350px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  p.menu {
+    font-size: clamp(0px,13vw,75px);
+    text-align: center;
+  }
+
+  #slogan{
+    display: none;
+  }
+
+  .index_footer{
+    justify-content: center;
+  }
+}
